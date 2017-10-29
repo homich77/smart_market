@@ -73,11 +73,13 @@ fabric.properties
 
 # *.iml
 # modules.xml
-.idea
+#.idea
 # *.ipr
 
 # Sonarlint plugin
 .idea/sonarlint
 
 # End of https://www.gitignore.io/api/django,pycharm
-templates/
+.idea
+**/migrations
+static

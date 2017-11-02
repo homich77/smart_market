@@ -5,13 +5,26 @@ html, body {
     background-color: #cbe7ff;
 }
 
+.navbar {
+    margin-bottom: 20px;
+}
+
+.product-item h1 {
+    font-size: 18px;
+}
+
 .product-item {
-    height: 200px;
+    height: 360px;
     background: white;
     border: 1px dashed lightgray;
     position: relative;
     padding: 5px;
     text-align: center;
+    margin-bottom: 10px;
+}
+
+.product-item-image img {
+    height: 100px;
 }
 
 .add-to-card-button {

@@ -8,5 +8,5 @@ class HomeView(TemplateView):
     template_name = "landing/home.html"
 
     def get(self, request, *args, **kwargs):
-        products = ProductImage.objects.filter(is_active=True)
-        return render(request, self.template_name, {'products': products})
+        product_images = ProductImage.objects.filter(is_active=True, is_main=True)
+        return render(request, self.template_name, {'product_images': product_images})

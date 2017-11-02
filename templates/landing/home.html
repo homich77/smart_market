@@ -8,21 +8,23 @@
                 <h1 class="text-center">News</h1>
             </div>
             {% for product_image in product_images %}
-            <div class="col-lg-3">
-                <div class="product-item">
-                    <div class="product-item-image">
-                        <img src="{{ product_image.image.url }}" alt="{{ product_image.product.name }}">
-                    </div>
-                    <h1>{{ product_image.product.name }}</h1>
-                    <p>{{ product_image.product.short_description|truncatechars_html:30 }}</p>
-                    <p>{{ product_image.product.price }}</p>
-                    <div class="add-to-card-btn">
-                        <button class="btn btn-success">
-                            add
-                        </button>
-                    </div>
-                </div>
+                {% include 'landing/product_row.html' %}
+            {% endfor %}
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="text-center">Phones</h1>
             </div>
+            {% for product_image in product_images_phone %}
+                {% include 'landing/product_row.html' %}
+            {% endfor %}
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="text-center">Laptops</h1>
+            </div>
+            {% for product_image in product_images_laptop %}
+                {% include 'landing/product_row.html' %}
             {% endfor %}
         </div>
     </div>

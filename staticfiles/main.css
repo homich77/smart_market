@@ -2,7 +2,7 @@ html, body {
     height: 100%;
     max-height: 100%;
     font-family: 'Roboto', sans-serif;
-    background-color: #cbe7ff;
+    background-color: #e7e8ea;
 }
 
 .navbar {
@@ -18,17 +18,29 @@ html, body {
     background: white;
     border: 1px dashed lightgray;
     position: relative;
-    padding: 5px;
+    padding: 10px 0 10px 0;
     text-align: center;
     margin-bottom: 10px;
 }
 
 .product-item-image img {
-    height: 100px;
+    max-height: 170px;
+    max-width: 170px;
+    padding: 10px;
 }
 
 .add-to-card-button {
     position: absolute;
     bottom: 15px;
     left: 50px;
+}
+
+.discount-container {
+    position: absolute;
+    top: 30%;
+    background-color: #5db85b;
+    width: 30%;
+    color: white;
+    font-weight: 700;
+    padding: 3px;
 }

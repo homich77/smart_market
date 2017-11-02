@@ -21,6 +21,7 @@ class ProductImage(models.Model):
     product = models.ForeignKey(Product, blank=True, null=True, default=None)
     image = models.ImageField(upload_to="")
     is_active = models.BooleanField(default=True)
+    is_main = models.BooleanField(default=False)
     created = models.DateTimeField(auto_now_add=True, auto_now=False)
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)
 

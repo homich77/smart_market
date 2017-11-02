@@ -1,5 +1,45 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    {{ object.price }}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                {% for product_item in product.productimage_set.all %}
+                    <div class="product-image-item">
+                        <img src="{{ product_item.image.url }}" alt="{{ product.name }}" class="image-responsive">
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="col-lg-6">
+                <h1 class="text-center">{{ product.name }}</h1>
+                <div class="">
+                    <p>Price: {{ product.price }}</p>
+                </div>
+                <div>
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#description" role="tab">
+                                Description
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#delivery" role="tab">
+                                Delivery
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content product-tabs">
+                      <div class="tab-pane active" id="description" role="tabpanel">
+                          {{ product.description }}
+                      </div>
+                      <div class="tab-pane" id="delivery" role="tabpanel">...</div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock content %}

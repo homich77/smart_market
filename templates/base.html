@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Starter Template for Bootstrap</title>
+    <title>{% block title %}Market{% endblock title %}</title>
 
     <!-- Bootstrap core CSS -->
     <link href="//v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -19,8 +19,8 @@
     {% include 'navbar.html' %}
 
     <div class="container">
-
-
+    {% block content %}
+    {% endblock content %}
 
     </div><!-- /.container -->
 

@@ -29,6 +29,10 @@ html, body {
     padding: 10px;
 }
 
+.product-item-body {
+    margin: 10px;
+}
+
 .add-to-card-button {
     position: absolute;
     bottom: 15px;

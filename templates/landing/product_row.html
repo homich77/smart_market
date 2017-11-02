@@ -11,13 +11,14 @@
             </div>
         {% endif %}
         <div class="product-item-body">
-            <h1>{{ product_image.product.name }}</h1>
+            <a href="{% url 'product_detail' product_image.product.id %}">
+                <h1>{{ product_image.product.name }}</h1>
+            </a>
             <p>{{ product_image.product.short_description|truncatechars_html:30 }}</p>
             <p>{{ product_image.product.price }}</p>
         </div>
         <div class="add-to-card-btn">
             <button class="btn btn-success">
-                <span class="glyphicons glyphicons-shopping-cart"></span>
                 add
             </button>
         </div>

@@ -56,3 +56,20 @@ html, body {
 .product-image-item {
     margin-bottom: 10px;
 }
+
+.wrapper {
+    min-height: 100%;
+}
+
+.wrapper-content {
+    overflow: auto;
+    padding-bottom: 180px;
+}
+
+.footer {
+    position: relative;
+    margin-top: -180px;
+    background-color: white;
+    clear: both;
+    height: 180px;
+}
